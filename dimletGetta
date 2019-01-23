@@ -2,9 +2,9 @@ i = peripheral.wrap("left")
 
 items = i.getAvailableItems()
 
-for k, item in pairs(items) do
+--for k, item in pairs(items) do
   --print("dimlet " .. item.fingerprint.dmg .. " amount " .. item.size)
-  deets = i.getItemDetail(item.fingerprint)
-end
+--  deets = i.getItemDetail(item.fingerprint)
+--end
 
-print(textutils.serialize(deets))
+print(textutils.serialize(items[2]))
