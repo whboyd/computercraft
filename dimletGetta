@@ -4,4 +4,6 @@ items = i.getAvailableItems()
 
 for k, item in pairs(items) do
   print("dimlet " .. item.fingerprint.dmg .. " amount " .. item.size)
+  deets = i.getItemDetail(item)
+  print(deets)
 end
