@@ -1,8 +1,8 @@
-interfaceSide = "left"
-main_export_side = "SOUTH"
-craftable_export_side = "EAST"
+local interfaceSide = "down"
+local main_export_side = "SOUTH"
+local craftable_export_side = "EAST"
 
-craftableDimlets = {
+local craftableDimlets = {
   151, 24, 159, 189, 190, 193, 247, 255, 254,
   272, 348, 14, 15, 16, 17, 18, 19, 20,
   21, 22, 23, 289, 1, 2, 240
