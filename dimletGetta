@@ -3,6 +3,7 @@ local main_export_side = "SOUTH"
 local craftable_export_side = "EAST"
 local keep_amount = 16
 local sleep_time = 10
+local loop = true
 
 local craftableDimlets = {
   151, 24, 159, 189, 190, 193, 247, 255, 254,
@@ -14,7 +15,7 @@ i = peripheral.wrap(interfaceSide)
 
 items = i.getAvailableItems()
 
-while true do
+while loop do
   for k, item in pairs(items) do
     --print("dimlet " .. item.fingerprint.dmg .. " amount " .. item.size)
     --ignore efficiency dimlets
@@ -36,5 +37,6 @@ while true do
       end
     end
   end
+  loop = false
   os.sleep(sleep_time)
 end
