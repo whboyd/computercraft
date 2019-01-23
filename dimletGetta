@@ -13,9 +13,8 @@ local craftableDimlets = {
 
 i = peripheral.wrap(interfaceSide)
 
-items = i.getAvailableItems()
-
 while loop do
+  items = i.getAvailableItems()
   for k, item in pairs(items) do
     --print("dimlet " .. item.fingerprint.dmg .. " amount " .. item.size)
     --ignore efficiency dimlets
