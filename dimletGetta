@@ -1,4 +1,4 @@
-local interfaceSide = "down"
+local interfaceSide = "bottom"
 local main_export_side = "SOUTH"
 local craftable_export_side = "EAST"
 
