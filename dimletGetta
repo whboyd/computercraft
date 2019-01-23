@@ -25,7 +25,7 @@ while loop do
         -- check if dimlet is craftable
         craftable = false
         for idx=1,#craftableDimlets do
-          if idx == item.fingerprint.dmg then
+          if item.fingerprint.dmg == craftableDimlets[idx] then
             craftable = true
           end
         end
