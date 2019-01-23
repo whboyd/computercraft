@@ -1,12 +1,17 @@
-i = peripheral.wrap("left")
+interfaceSide = "left"
+targetSide = "EAST"
+
+i = peripheral.wrap(interfaceSide)
 
 items = i.getAvailableItems()
 
---for k, item in pairs(items) do
+for k, item in pairs(items) do
   --print("dimlet " .. item.fingerprint.dmg .. " amount " .. item.size)
---  deets = i.getItemDetail(item.fingerprint)
---end
-
-print(textutils.serialize(items[2]))
-deets = i.getItemDetail(items[2].fingerprint)
-print(deets)
+  if item.fingerprint.dmg == 268 then
+    extra_amount = amount - 10
+    if extra_amount > 0 then
+      print("exportan!")
+      i.exportItem(item.fingerprint, targetSide, 3)
+    end
+  end
+end
