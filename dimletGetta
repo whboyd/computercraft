@@ -32,7 +32,7 @@ while loop do
         if craftable == true then
           i.exportItem(item.fingerprint, craftable_export_side, extra_amount)
         else
-          --i.exportItem(item.fingerprint, main_export_side, extra_amount)
+          i.exportItem(item.fingerprint, main_export_side, extra_amount)
         end
       end
     end
