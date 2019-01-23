@@ -8,3 +8,5 @@ items = i.getAvailableItems()
 --end
 
 print(textutils.serialize(items[2]))
+deets = i.getItemDetail(items[2].fingerprint)
+print(textutils.serialize(deets))
