@@ -1,6 +1,7 @@
 local interfaceSide = "bottom"
 local main_export_side = "SOUTH"
 local craftable_export_side = "EAST"
+local keep_amount = 16
 
 local craftableDimlets = {
   151, 24, 159, 189, 190, 193, 247, 255, 254,
@@ -16,7 +17,7 @@ for k, item in pairs(items) do
   --print("dimlet " .. item.fingerprint.dmg .. " amount " .. item.size)
   --ignore efficiency dimlets
   if (item.fingerprint.dmg ~= 153) and (item.fingerprint.dmg ~= 154) then
-    extra_amount = item.size - 10
+    extra_amount = item.size - keep_amount
     if extra_amount > 0 then
       -- check if dimlet is craftable
       craftable = false
