@@ -37,6 +37,6 @@ while loop do
       end
     end
   end
-  loop = false
+  loop = true
   os.sleep(sleep_time)
 end
