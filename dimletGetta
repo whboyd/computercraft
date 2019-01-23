@@ -8,10 +8,10 @@ items = i.getAvailableItems()
 for k, item in pairs(items) do
   --print("dimlet " .. item.fingerprint.dmg .. " amount " .. item.size)
   if item.fingerprint.dmg == 268 then
-    extra_amount = amount - 10
+    extra_amount = item.size - 10
     if extra_amount > 0 then
       print("exportan!")
-      i.exportItem(item.fingerprint, targetSide, 3)
+      i.exportItem(item.fingerprint, targetSide, extra_amount)
     end
   end
 end
