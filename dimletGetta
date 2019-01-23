@@ -1,5 +1,6 @@
 interfaceSide = "left"
-targetSide = "EAST"
+main_export_side = "SOUTH"
+craftable_export_side = "EAST"
 
 i = peripheral.wrap(interfaceSide)
 
