@@ -1,6 +1,12 @@
-interfaceSide = "left"
-main_export_side = "SOUTH"
-craftable_export_side = "EAST"
+local interfaceSide = "left"
+local main_export_side = "SOUTH"
+local craftable_export_side = "EAST"
+
+local craftableDimlets = {
+  151, 24, 159, 189, 190, 193, 247, 255, 254,
+  272, 348, 14, 15, 16, 17, 18, 19, 20,
+  21, 22, 23, 289, 1, 2, 240
+}
 
 i = peripheral.wrap(interfaceSide)
 
@@ -12,6 +18,13 @@ for k, item in pairs(items) do
   if (item.fingerprint.dmg ~= 153) and (item.fingerprint.dmg ~= 154) then
     extra_amount = item.size - 10
     if extra_amount > 0 then
+      -- check if dimlet is craftable
+      craftable = false
+      for idx=1,#craftableDimlets do
+        if idx == item.fingerprint.dmg then
+          craftable = true
+        end
+      end
       i.exportItem(item.fingerprint, targetSide, extra_amount)
     end
   end
