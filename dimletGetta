@@ -25,7 +25,11 @@ for k, item in pairs(items) do
           craftable = true
         end
       end
-      i.exportItem(item.fingerprint, targetSide, extra_amount)
+      if craftable then
+        i.exportItem(item.fingerprint, craftable_export_side, extra_amount)
+      else
+        i.exportItem(item.fingerprint, main_export_side, extra_amount)
+      end
     end
   end
 end
