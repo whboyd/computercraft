@@ -29,9 +29,9 @@ while loop do
           end
         end
         if craftable == true then
-          i.exportItem(item.fingerprint, craftable_export_side, extra_amount)
+          local ok, val = i.exportItem(item.fingerprint, craftable_export_side, extra_amount)
         else
-          i.exportItem(item.fingerprint, main_export_side, extra_amount)
+          local ok, val = i.exportItem(item.fingerprint, main_export_side, extra_amount)
         end
       end
     end
