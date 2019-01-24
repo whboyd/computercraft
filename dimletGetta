@@ -28,11 +28,14 @@ while loop do
             craftable = true
           end
         end
-        if craftable == true then
-          local ok, val = i.exportItem(item.fingerprint, craftable_export_side, extra_amount)
-        else
-          local ok, val = i.exportItem(item.fingerprint, main_export_side, extra_amount)
+        local export_side = main_export_side
+        local function moveItem()
+          i.exportItem(item.fingerprint, export_side, extra_amount)
         end
+        if craftable == true then
+          export_side = craftable_export_side
+        end
+        pcall(moveItem)
       end
     end
   end
